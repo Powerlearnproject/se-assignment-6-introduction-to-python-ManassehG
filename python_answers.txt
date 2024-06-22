@@ -1,0 +1,112 @@
+# Assignment: Introduction to Python
+
+## Python Basics
+
+Python is a high-level, interpreted programming language known for its simplicity and readability. Key features include:
+- Simple and easy-to-learn syntax
+- Interpreted nature
+- Rich standard library
+- Dynamically typed
+
+Python is popular for web development, scientific computing, data analysis, and automation tasks.
+
+## Installing Python
+
+### Steps to install Python:
+1. Download Python installer from python.org.
+2. Run the installer, ensuring to check "Add Python to PATH".
+3. Verify installation by typing `python --version` in the terminal/command prompt.
+4. Setting up a virtual environment:
+   - Install virtualenv using `pip install virtualenv`.
+   - Create a virtual environment: `virtualenv myenv`.
+   - Activate virtual environment:
+     - Windows: `myenv\Scripts\activate`
+     - macOS/Linux: `source myenv/bin/activate`
+
+## Python Syntax and Semantics
+
+### Example of "Hello, World!" program:
+```python
+print("Hello, World!")
+The print() function outputs text to the console. "Hello, World!" is a string literal.
+Data Types and Variables
+Basic data types in Python include int, float, str, and bool.
+python
+Copy code
+num = 10  # integer
+pi = 3.14  # float
+message = "Hello, Python!"  # string
+is_valid = True  # boolean
+Control Structures
+Conditional statements and loops are fundamental:
+
+# Example of if-else statement
+x = 10
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is 5 or smaller")
+
+# Example of for loop
+for i in range(1, 5):
+    print(i)
+Functions in Python
+Functions improve code modularity and maintainability.
+
+
+def sum_two_numbers(a, b):
+    return a + b
+
+result = sum_two_numbers(3, 5)
+print("Sum:", result)
+Lists and Dictionaries
+Lists [] store ordered collections, while dictionaries {} store key-value pairs.
+python
+Copy code
+numbers = [1, 2, 3, 4, 5]
+person = {"name": "John", "age": 30, "city": "New York"}
+
+# Accessing elements
+print(numbers[0])  # Output: 1
+print(person["name"])  # Output: John
+
+# Adding elements
+numbers.append(6)
+person["gender"] = "Male"
+
+# Iterating through elements
+for num in numbers:
+    print(num)
+
+for key, value in person.items():
+    print(key, ":", value)
+Exception Handling
+Exception handling allows graceful error handling.
+
+
+try:
+    x = 1 / 0  # Raises a ZeroDivisionError
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("This will execute no matter what")
+Modules and Packages
+Modules are Python files containing functions and variables. Packages are directories of Python modules.
+
+import math
+
+radius = 5
+area = math.pi * radius ** 2
+print("Area of the circle:", area)
+File I/O
+Example of reading from a file:
+
+with open('file.txt', 'r') as f:
+    content = f.read()
+    print(content)
+Example of writing to a file:
+
+lines = ['Line 1\n', 'Line 2\n', 'Line 3\n']
+
+with open('output.txt', 'w') as f:
+    f.writelines(lines)
